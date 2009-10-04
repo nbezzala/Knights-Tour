@@ -1,0 +1,31 @@
+td.horse {
+    background-image:url(/images/horse.png);
+    background-repeat: no-repeat;
+    width: 39px;
+    height: 39px;
+}
+
+td.queen {
+    background-image:url(/images/queen.png);
+    background-repeat: no-repeat;
+    width: 39px;
+    height: 39px;
+}
+
+.error-msg-box {
+	padding: 3px; 
+	border: 2px solid #BB0000; 
+	color: #BB0000; 
+	width: 100%; 
+	text-align: center; 
+	display: none
+}    
+
+.info-msg-box {
+    padding: 3px; 
+    border: 2px solid #00BB00; 
+    color: #00BB00; 
+    width: 100%; 
+    text-align: center; 
+    display: none
+}

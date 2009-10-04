@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <title>Knights Tour</title>
+    </head>
+    <body>
+
+        <div style="text-align: center; width: 100%">
+
+<!-- Google Ad -->
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-7658367111060258";
+	/* knights_tour_banner */
+	google_ad_slot = "0932034517";
+	google_ad_width = 468;
+	google_ad_height = 60;
+	//-->
+	</script>
+
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+<!-- Google Ad ends -->
+
+        <script src="http://knights-tour.appspot.com/js/jquery-1.3.2.min.js"></script>
+        <link href="http://knights-tour.appspot.com/css/jquery-ui-1.7.1.custom.css" rel="stylesheet"/>
+        <script src="http://knights-tour.appspot.com/js/jquery-ui-1.7.1.custom.min.js"></script>
+
+        <script>
+            $(function() {
+                $("#tabs").tabs();
+            });
+        </script>
+
+<!-- This is used for posting an activity -->
+<div id="content_div"></div>
+
+
+<div style="text-align: center; width: 80%">
+    <div id="msg-box" class="error-msg-box"> 
+		<p><!-- msg goes here --></p>
+		<input type="button" onclick="dismissMsg()" value="OK"/>
+	</div>
+</div>
+
+
+<div id="tabs">
+
+    <ul>
+        <li><a href="#tab-1">Knights Tour</a></li>
+        <li><a href="#tab-2">Eight Queens</a></li>
+        <li><a href="#tab-3">How to Play</a></li>
+    </ul>
+    
+    <div id="tab-1" style="text-align: center;">
+		
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/puzzle.css">
+
+<script src="http://localhost:8080/js/opensocial.js" type="text/javascript"></script>
+<script src="http://localhost:8080/js/puzzle.js" type="text/javascript"></script>
+
+<table border="1" align="center">
+	<tr>
+		<td bgcolor="white" id="sq70" bgcolor="white" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq71" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq72" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq73" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq74" height="39" width="39"><div /></td>
+
+		<td bgcolor="grey" id="sq75" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq76" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq77" height="39" width="39"><div /></td>
+	</tr>
+	<tr>
+		<td bgcolor="grey" id="sq60" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq61" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq62" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq63" height="39" width="39"><div /></td>
+
+		<td bgcolor="grey" id="sq64" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq65" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq66" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq67" height="39" width="39"><div /></td>
+	</tr>
+	<tr>
+		<td bgcolor="white" id="sq50" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq51" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq52" height="39" width="39"><div /></td>
+
+		<td bgcolor="grey" id="sq53" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq54" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq55" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq56" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq57" height="39" width="39"><div /></td>
+	</tr>
+	<tr>
+		<td bgcolor="grey" id="sq40" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq41" height="39" width="39"><div /></td>
+
+		<td bgcolor="grey" id="sq42" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq43" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq44" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq45" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq46" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq47" height="39" width="39"><div /></td>
+	</tr>
+	<tr>
+		<td bgcolor="white" id="sq30" height="39" width="39"><div /></td>
+
+		<td bgcolor="grey" id="sq31" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq32" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq33" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq34" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq35" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq36" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq37" height="39" width="39"><div /></td>
+	</tr>
+	<tr>
+
+		<td bgcolor="grey" id="sq20" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq21" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq22" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq23" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq24" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq25" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq26" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq27" height="39" width="39"><div /></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="white" id="sq10" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq11" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq12" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq13" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq14" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq15" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq16" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq17" height="39" width="39"><div /></td>
+
+	</tr>
+	<tr>
+		<td bgcolor="grey" id="sq00" height="39" width="39"><div /></td>
+<!--		<td id="sq01" class="horse"> -->
+		<td bgcolor="white" id="sq01" height="39" width="39"><div /></td>
+            <div class="horse" id="div01" >
+            </div>
+        </td>
+		<td bgcolor="grey" id="sq02" height="39" width="39"><div /></td>
+
+		<td bgcolor="white" id="sq03" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq04" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq05" height="39" width="39"><div /></td>
+		<td bgcolor="grey" id="sq06" height="39" width="39"><div /></td>
+		<td bgcolor="white" id="sq07" height="39" width="39"><div /></td>
+	</tr>
+</table>
+<br />
+<input type="button"  name="undo" value="Undo" id="undo" />
+<input type="button"  name="restart" value="Restart" id="restart" />
+
+
+
+    </div>
+    <div id="tab-2" style="text-align: center;">
+        <script src="http://localhost:8080/js/queen.js" type="text/javascript"></script>
+
+<table border="1" align="center">
+<tr align="center">
+    <td width="39" bgcolor="white" id="eq70" height="39" />
+    <td width="39" bgcolor="grey" id="eq71" height="39" />
+
+    <td width="39" bgcolor="white" id="eq72" height="39" />
+    <td width="39" bgcolor="grey" id="eq73" height="39" />
+    <td width="39" bgcolor="white" id="eq74" height="39" />
+
+    <td width="39" bgcolor="grey" id="eq75" height="39" />
+    <td width="39" bgcolor="white" id="eq76" height="39" />
+    <td width="39" bgcolor="grey" id="eq77" height="39" />
+</tr>
+<tr align="center">
+    <td width="39" bgcolor="grey" id="eq60" height="39" />
+
+    <td width="39" bgcolor="white" id="eq61" height="39" />
+    <td width="39" bgcolor="grey" id="eq62" height="39" />
+    <td width="39" bgcolor="white" id="eq63" height="39" />
+    <td width="39" bgcolor="grey" id="eq64" height="39" />
+
+    <td width="39" bgcolor="white" id="eq65" height="39" />
+    <td width="39" bgcolor="grey" id="eq66" height="39" />
+    <td width="39" bgcolor="white" id="eq67" height="39" />
+</tr>
+<tr align="center">
+
+    <td width="39" bgcolor="white" id="eq50" height="39" />
+    <td width="39" bgcolor="grey" id="eq51" height="39" />
+    <td width="39" bgcolor="white" id="eq52" height="39" />
+    <td width="39" bgcolor="grey" id="eq53" height="39" />
+    <td width="39" bgcolor="white" id="eq54" height="39" />
+
+    <td width="39" bgcolor="grey" id="eq55" height="39" />
+    <td width="39" bgcolor="white" id="eq56" height="39" />
+    <td width="39" bgcolor="grey" id="eq57" height="39" />
+
+</tr>
+<tr align="center">
+    <td width="39" bgcolor="grey" id="eq40" height="39" />
+    <td width="39" bgcolor="white" id="eq41" height="39" />
+    <td width="39" bgcolor="grey" id="eq42" height="39" />
+    <td width="39" bgcolor="white" id="eq43" height="39" />
+    <td width="39" bgcolor="grey" id="eq44" height="39" />
+
+    <td width="39" bgcolor="white" id="eq45" height="39" />
+    <td width="39" bgcolor="grey" id="eq46" height="39" />
+
+    <td width="39" bgcolor="white" id="eq47" height="39" />
+</tr>
+<tr align="center">
+    <td width="39" bgcolor="white" id="eq30" height="39" />
+    <td width="39" bgcolor="grey" id="eq31" height="39" />
+    <td width="39" bgcolor="white" id="eq32" height="39" />
+    <td width="39" bgcolor="grey" id="eq33" height="39" />
+    <td width="39" bgcolor="white" id="eq34" height="39" />
+
+    <td width="39" bgcolor="grey" id="eq35" height="39" />
+
+    <td width="39" bgcolor="white" id="eq36" height="39" />
+    <td width="39" bgcolor="grey" id="eq37" height="39" />
+</tr>
+<tr align="center">
+    <td width="39" bgcolor="grey" id="eq20" height="39" />
+    <td width="39" bgcolor="white" id="eq21" height="39" />
+    <td width="39" bgcolor="grey" id="eq22" height="39" />
+    <td width="39" bgcolor="white" id="eq23" height="39" />
+    <td width="39" bgcolor="grey" id="eq24" height="39" />
+
+    <td width="39" bgcolor="white" id="eq25" height="39" />
+    <td width="39" bgcolor="grey" id="eq26" height="39" />
+    <td width="39" bgcolor="white" id="eq27" height="39" />
+</tr>
+<tr align="center">
+    <td width="39" bgcolor="white" id="eq10" height="39" />
+    <td width="39" bgcolor="grey" id="eq11" height="39" />
+    <td width="39" bgcolor="white" id="eq12" height="39" />
+    <td width="39" bgcolor="grey" id="eq13" height="39" />
+    <td width="39" bgcolor="white" id="eq14" height="39" />
+
+    <td width="39" bgcolor="grey" id="eq15" height="39" />
+    <td width="39" bgcolor="white" id="eq16" height="39" />
+    <td width="39" bgcolor="grey" id="eq17" height="39" />
+</tr>
+<tr align="center">
+    <td width="39" bgcolor="grey" id="eq00" height="39" />
+    <td width="39" bgcolor="white" id="eq01" height="39" />
+    <td width="39" bgcolor="grey" id="eq02" height="39" />
+    <td width="39" bgcolor="white" id="eq03" height="39" />
+
+    <td width="39" bgcolor="grey" id="eq04" height="39" />
+
+    <td width="39" bgcolor="white" id="eq05" height="39" />
+    <td width="39" bgcolor="grey" id="eq06" height="39" />
+    <td width="39" bgcolor="white" id="eq07" height="39" />
+</tr>
+</table>
+
+<br>
+<input type="button" name="restart_q" id="restart_q" value="Restart">
+
+
+    </div>
+
+    <div id="tab-3" style="text-align: left;">
+        Knights Tour:<br><br>
+Click on a square to move the horse to that square.<br>
+Click on the Undo button to go back one move.<br>
+Click on the Restart button to clear the board and start from the beginning.<br>
+The puzzle is completed when all the 64 squares have been covered by the horse.<br>
+<br>
+The horse can move in one of these ways-<br>
+1. two steps up, and one to the right<br>
+
+2. two steps up, and one to the left<br>
+3. two steps down, and one to the right<br>
+4. two steps down, and one to the left<br>
+5. two steps right, and one down<br>
+6. two steps right, and one up<br>
+7. two steps left, and one down<br>
+8. two steps left, and one up<br>
+<br>
+Eight Queens:<br><br>
+
+Click on a square to place the queen on that square. All the squares which are covered by the queen will now show in red.<br>
+Click on any other square to put another queen on that square.<br>
+The puzzle is completed when you have placed 8 queens on the board without crossing each other.<br>
+<br>
+Info Messages:<br>
+If the above rules are broken, you will see a message in green on the top of the page. These will disappear when you click on the correct square on the chess board.<br><br>
+Created and maintained by <a href="http://www.orkut.co.in/Main#Profile.aspx?uid=9307488218799974900">Nitish Bezzala</a>
+<br>
+Please join the <a href="http://www.orkut.co.in/Main#Community.aspx?cmm=87257954">Knights Tour Community</a> to discuss this app and to provide feedback.
+
+<br>
+
+
+
+    </div>
+</div>
+
+</div>
+
+
+
+    </body>
+</html>

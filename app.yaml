@@ -1,0 +1,18 @@
+application: knights-tour
+version: 4
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: templates/css
+
+- url: /js
+  static_dir: templates/js
+
+- url: /images
+  static_dir: templates/images
+
+
+- url: /.*
+  script: main.py
