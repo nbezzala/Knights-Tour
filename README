@@ -1,0 +1,9 @@
+Knights Tour
+
+This is a web page to play the Knights Tour puzzle.
+
+The knight has to go around the chess board and go to all the squares, without going to the same square twice.
+
+It is hosted on google appengine. And uses html and jquery.
+
+I am now porting it to use LiveScript.
