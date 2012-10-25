@@ -53,31 +53,13 @@
       return parseInt(id.substr(3, 1));
     };
     prototype.checkMove = function(x, y){
-      var results;
-      results = [[this.x + 1, this.y + 2], [this.x + 1, this.y + 2]];
-      if (+x === this.x + 1 && +y === this.y + 2) {
-        return 1;
-      }
-      if (+x === this.x + 1 && +y === this.y - 2) {
-        return 1;
-      }
-      if (+x === this.x - 1 && +y === this.y + 2) {
-        return 1;
-      }
-      if (+x === this.x - 1 && +y === this.y - 2) {
-        return 1;
-      }
-      if (+x === this.x + 2 && +y === this.y + 1) {
-        return 1;
-      }
-      if (+x === this.x - 2 && +y === this.y + 1) {
-        return 1;
-      }
-      if (+x === this.x - 2 && +y === this.y - 1) {
-        return 1;
-      }
-      if (+x === this.x + 2 && +y === this.y - 1) {
-        return 1;
+      var results, i$, len$, xy;
+      results = [[1, 2], [1, -2], [-1, 2], [-1, -2], [2, 1], [2, -1], [-2, 1], [-2, -1]];
+      for (i$ = 0, len$ = results.length; i$ < len$; ++i$) {
+        xy = results[i$];
+        if (+x === this.x + xy[0] && +y === this.y + xy[1]) {
+          return 1;
+        }
       }
     };
     prototype.move = function(to){

@@ -47,19 +47,10 @@ class Horse implements Display
     parseInt id.substr 3 1
   
   check-move: (x, y) ->
-    results = [ 
-      [ @x + 1, @y + 2],
-      [ @x + 1, @y + 2],
-    ]
-    return 1 if +x == @x + 1 and +y == @y + 2
-    return 1 if +x == @x + 1 and +y == @y - 2
-    return 1 if +x == @x - 1 and +y == @y + 2
-    return 1 if +x == @x - 1 and +y == @y - 2
-    return 1 if +x == @x + 2 and +y == @y + 1
-    return 1 if +x == @x - 2 and +y == @y + 1
-    return 1 if +x == @x - 2 and +y == @y - 1
-    return 1 if +x == @x + 2 and +y == @y - 1
-                     
+    results = [ [1 2] [1 -2] [-1 2] [-1 -2] [2 1] [2 -1] [-2 1] [-2 -1] ]
+    for xy in results
+      return 1 if +x == @x + xy[0] and +y == @y + xy[1]
+                         
   move: (to) ->
     x = @getx to
     y = @gety to
