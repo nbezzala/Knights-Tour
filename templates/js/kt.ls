@@ -1,5 +1,5 @@
 # A role to display messages and errors to the user
-MessageDisplay =
+Display =
 
   hide-error: ->
     $ \#msg-box .removeClass \error-msg-box .addClass \info-msg-box .hide!
@@ -10,9 +10,25 @@ MessageDisplay =
   show-info: (msg) ->
     $ \#msg-box .removeClass \error-msg-box .addClass \info-msg-box .html msg .show!
 
+  get-color: (x, y) ->
+    if ( (x % 2 == 0 && y % 2 != 0) || (x%2 != 0 && y%2 ==0) )
+      color = \white
+    else
+      color = \grey
+    
+  make-board: ->
+    $ \#board .append "<table border=1 align='center'>"
+    for i from 7 to 0 by -1
+      row = "row" + i
+      $ \#board .find \table .append "<tr id=" + row + ">"
+      for j from 0 to 7
+        color = @get-color i, j
+        $ \#board .find \table .find "#" + row .append "<td class = 'square " + color + "' id='sq" + i + j + "' >"
+
+    $ \#sq01 .addClass \horse
     
 # The horse class, which knows where the horse is, and the moves it has made
-class Horse implements MessageDisplay
+class Horse implements Display
   ->
     @x = 0
     @y = 1
@@ -77,8 +93,11 @@ class Horse implements MessageDisplay
     @set-xy previous
     
     
+
 # Use the class definitions here    
 horse = new Horse
+
+$ horse.make-board!
 
 $ \#undo .on \click ->
   horse.undo-move!

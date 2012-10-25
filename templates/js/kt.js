@@ -1,6 +1,6 @@
 (function(){
-  var MessageDisplay, Horse, horse;
-  MessageDisplay = {
+  var Display, Horse, horse;
+  Display = {
     hideError: function(){
       return $('#msg-box').removeClass('error-msg-box').addClass('info-msg-box').hide();
     },
@@ -9,6 +9,27 @@
     },
     showInfo: function(msg){
       return $('#msg-box').removeClass('error-msg-box').addClass('info-msg-box').html(msg).show();
+    },
+    getColor: function(x, y){
+      var color;
+      if ((x % 2 === 0 && y % 2 !== 0) || (x % 2 !== 0 && y % 2 === 0)) {
+        return color = 'white';
+      } else {
+        return color = 'grey';
+      }
+    },
+    makeBoard: function(){
+      var i, row, j, color;
+      $('#board').append("<table border=1 align='center'>");
+      for (i = 7; i >= 0; --i) {
+        row = "row" + i;
+        $('#board').find('table').append("<tr id=" + row + ">");
+        for (j = 0; j <= 7; ++j) {
+          color = this.getColor(i, j);
+          $('#board').find('table').find("#" + row).append("<td class = 'square " + color + "' id='sq" + i + j + "' >");
+        }
+      }
+      return $('#sq01').addClass('horse');
     }
   };
   Horse = (function(){
@@ -32,6 +53,8 @@
       return parseInt(id.substr(3, 1));
     };
     prototype.checkMove = function(x, y){
+      var results;
+      results = [[this.x + 1, this.y + 2], [this.x + 1, this.y + 2]];
       if (+x === this.x + 1 && +y === this.y + 2) {
         return 1;
       }
@@ -92,8 +115,9 @@
       return this.setXy(previous);
     };
     return Horse;
-  }(MessageDisplay));
+  }(Display));
   horse = new Horse;
+  $(horse.makeBoard());
   $('#undo').on('click', function(){
     return horse.undoMove();
   });
